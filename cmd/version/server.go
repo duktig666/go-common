@@ -2,6 +2,7 @@ package version
 
 import (
 	"fmt"
+	"github.com/fatih/color"
 	"github.com/qiaoshurui/couples-subtotal/common/global"
 	"github.com/spf13/cobra"
 )
@@ -21,6 +22,6 @@ var (
 )
 
 func run() error {
-	fmt.Printf("couples-subtotal version: %s\n", global.VERSION)
+	fmt.Printf("couples-subtotal version: %s\n", color.GreenString(global.VERSION))
 	return nil
 }
