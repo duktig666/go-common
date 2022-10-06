@@ -12,9 +12,9 @@ import (
 	"github.com/spf13/viper"
 )
 
-func InitConfig() {
+func InitConfig(configDir string) {
 	v := viper.New()
-	v.SetConfigFile("config/config.yaml")
+	v.SetConfigFile(configDir)
 	v.SetConfigType("yaml")
 	err := v.ReadInConfig()
 	if err != nil {
