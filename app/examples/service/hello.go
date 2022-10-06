@@ -4,10 +4,16 @@
 
 package service
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/pkg/errors"
+)
 
 type Hello struct{}
 
-func (h *Hello) SayHello(name string) string {
-	return fmt.Sprintf("Hello %s!", name)
+func (h *Hello) SayHello(name string) (string, error) {
+	if name == "" {
+		return "", errors.Errorf("param err:%s.", "name is empty")
+	}
+	return fmt.Sprintf("Hello %s!", name), nil
 }

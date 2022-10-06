@@ -6,6 +6,7 @@ package hello
 
 import (
 	"fmt"
+	"github.com/qiaoshurui/couples-subtotal/app/examples/service"
 	"github.com/qiaoshurui/couples-subtotal/common/global"
 	"github.com/stretchr/testify/assert"
 	"net/http"
@@ -13,6 +14,7 @@ import (
 	"testing"
 )
 
+// 目前有问题
 func TestPingRoute(t *testing.T) {
 	//initialize.InitServer()
 	//api.Run()
@@ -25,6 +27,9 @@ func TestPingRoute(t *testing.T) {
 	fmt.Println(w.Body.String())
 }
 
-func TestFmt(t *testing.T) {
-	fmt.Printf("name:%s\n", "Q")
+func TestSayHello(t *testing.T) {
+	helloService := new(service.Hello)
+	helloStr, err := helloService.SayHello("")
+	assert.Nil(t, err)
+	fmt.Println(helloStr)
 }
