@@ -13,6 +13,5 @@ func InitGin() {
 	r := gin.New()
 	// 添加默认的中间件
 	r.Use(gin.Recovery())
-
 	global.Router = r
 }
