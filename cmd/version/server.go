@@ -21,6 +21,6 @@ var (
 )
 
 func run() error {
-	fmt.Printf("couples-subtotal version:%s\n", global.Config.Server.Version)
+	fmt.Printf("couples-subtotal version: %s\n", global.VERSION)
 	return nil
 }

@@ -10,6 +10,8 @@ import (
 	"gorm.io/gorm"
 )
 
+const VERSION = "v0.0.1"
+
 var (
 	Gorm   *gorm.DB
 	Viper  *viper.Viper
