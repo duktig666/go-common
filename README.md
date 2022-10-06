@@ -20,3 +20,22 @@
 - test 测试目录
 - pkg 第三方工具包
 ```
+
+## 运行
+### 初始化项目
+```shell
+./cli-init.sh
+```
+
+### 运行
+```shell
+# cli帮助
+./couples-cli help
+
+# 查看版本
+./couples-cli version
+
+# 运行http服务
+./couples-cli server
+./couples-cli server -c config/config-xxx.yaml
+```

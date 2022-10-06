@@ -11,9 +11,9 @@ import (
 
 var once sync.Once
 
-func InitServer() {
+func InitServer(configDir string) {
 	once.Do(func() {
-		InitConfig()
+		InitConfig(configDir)
 		InitGorm()
 		logger.InitLog()
 		InitGin()

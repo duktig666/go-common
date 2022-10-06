@@ -19,7 +19,9 @@ var (
 
 type ConfigYaml struct {
 	Server struct {
-		Http struct {
+		Name    string
+		Version string
+		Http    struct {
 			Host string
 			Port int
 		}

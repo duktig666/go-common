@@ -5,11 +5,9 @@
 package main
 
 import (
-	"github.com/qiaoshurui/couples-subtotal/cmd/api"
-	"github.com/qiaoshurui/couples-subtotal/common/initialize"
+	"github.com/qiaoshurui/couples-subtotal/cmd"
 )
 
 func main() {
-	initialize.InitServer()
-	api.Run()
+	cmd.Execute()
 }
