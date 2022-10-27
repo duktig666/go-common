@@ -5,7 +5,7 @@
 package main
 
 import (
-	"github.com/qiaoshurui/couples-subtotal/cmd"
+	"github.com/duktig666/go-common/cmd"
 )
 
 func main() {

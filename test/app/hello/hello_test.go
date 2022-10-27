@@ -6,8 +6,8 @@ package hello
 
 import (
 	"fmt"
-	"github.com/qiaoshurui/couples-subtotal/app/examples/service"
-	"github.com/qiaoshurui/couples-subtotal/common/global"
+	"github.com/duktig666/go-common/app/examples/service"
+	"github.com/duktig666/go-common/common/global"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"

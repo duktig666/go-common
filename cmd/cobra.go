@@ -6,9 +6,9 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/duktig666/go-common/cmd/api"
+	"github.com/duktig666/go-common/cmd/version"
 	"github.com/pkg/errors"
-	"github.com/qiaoshurui/couples-subtotal/cmd/api"
-	"github.com/qiaoshurui/couples-subtotal/cmd/version"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -17,7 +17,7 @@ var rootCmd = &cobra.Command{
 	Use:          "couples-cli",
 	Short:        "couples-cli",
 	SilenceUsage: true,
-	Long:         `couples-cli:https://github.com/qiaoshurui/couples-subtotal`,
+	Long:         `couples-cli:https://github.com/duktig666/go-common`,
 	Args: func(cmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
 			tip()
@@ -33,7 +33,7 @@ var rootCmd = &cobra.Command{
 
 func tip() {
 	usageStr := `欢迎使用 ` + `couples-subtotal:` + ` 可以使用 ` + `-h` + ` 查看命令`
-	usageStr1 := `也可以参考 https://github.com/qiaoshurui/couples-subtotal 的相关内容`
+	usageStr1 := `也可以参考 https://github.com/duktig666/go-common 的相关内容`
 	fmt.Printf("%s\n", usageStr)
 	fmt.Printf("%s\n", usageStr1)
 }

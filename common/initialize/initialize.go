@@ -5,7 +5,7 @@
 package initialize
 
 import (
-	"github.com/qiaoshurui/couples-subtotal/common/logger"
+	"github.com/duktig666/go-common/common/logger"
 	"sync"
 )
 

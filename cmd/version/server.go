@@ -2,8 +2,8 @@ package version
 
 import (
 	"fmt"
+	"github.com/duktig666/go-common/common/global"
 	"github.com/fatih/color"
-	"github.com/qiaoshurui/couples-subtotal/common/global"
 	"github.com/spf13/cobra"
 )
 

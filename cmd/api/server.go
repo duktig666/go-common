@@ -6,11 +6,11 @@ package api
 
 import (
 	"fmt"
+	"github.com/duktig666/go-common/app/examples/router"
+	"github.com/duktig666/go-common/common/global"
+	"github.com/duktig666/go-common/common/initialize"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
-	"github.com/qiaoshurui/couples-subtotal/app/examples/router"
-	"github.com/qiaoshurui/couples-subtotal/common/global"
-	"github.com/qiaoshurui/couples-subtotal/common/initialize"
 	"github.com/spf13/cobra"
 	"log"
 	"net/http"

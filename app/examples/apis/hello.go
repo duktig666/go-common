@@ -5,11 +5,11 @@
 package apis
 
 import (
+	"github.com/duktig666/go-common/app/examples/service"
+	"github.com/duktig666/go-common/common/api"
+	"github.com/duktig666/go-common/common/logger"
+	"github.com/duktig666/go-common/common/res"
 	"github.com/gin-gonic/gin"
-	"github.com/qiaoshurui/couples-subtotal/app/examples/service"
-	"github.com/qiaoshurui/couples-subtotal/common/api"
-	"github.com/qiaoshurui/couples-subtotal/common/logger"
-	"github.com/qiaoshurui/couples-subtotal/common/res"
 )
 
 type Hello struct {

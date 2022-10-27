@@ -5,8 +5,8 @@
 package initialize
 
 import (
+	"github.com/duktig666/go-common/common/global"
 	"github.com/gin-gonic/gin"
-	"github.com/qiaoshurui/couples-subtotal/common/global"
 )
 
 func InitGin() {

@@ -6,7 +6,7 @@ package logger
 
 import (
 	"fmt"
-	"github.com/qiaoshurui/couples-subtotal/common/global"
+	"github.com/duktig666/go-common/common/global"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"strings"

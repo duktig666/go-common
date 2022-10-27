@@ -5,8 +5,8 @@
 package router
 
 import (
+	"github.com/duktig666/go-common/app/examples/apis"
 	"github.com/gin-gonic/gin"
-	"github.com/qiaoshurui/couples-subtotal/app/examples/apis"
 )
 
 func RegisterHelloRouter(v1 *gin.RouterGroup) {

@@ -6,9 +6,9 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/duktig666/go-common/common/global"
+	"github.com/duktig666/go-common/common/logger"
 	"github.com/fsnotify/fsnotify"
-	"github.com/qiaoshurui/couples-subtotal/common/global"
-	"github.com/qiaoshurui/couples-subtotal/common/logger"
 	"github.com/spf13/viper"
 )
 

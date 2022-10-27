@@ -1,4 +1,4 @@
-module github.com/qiaoshurui/couples-subtotal
+module github.com/duktig666/go-common
 
 go 1.18
 

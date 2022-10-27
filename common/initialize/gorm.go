@@ -5,8 +5,8 @@
 package initialize
 
 import (
-	"github.com/qiaoshurui/couples-subtotal/common/global"
-	"github.com/qiaoshurui/couples-subtotal/common/logger"
+	"github.com/duktig666/go-common/common/global"
+	"github.com/duktig666/go-common/common/logger"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	gormLog "gorm.io/gorm/logger"
