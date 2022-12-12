@@ -61,4 +61,5 @@ report.*.json
 
 go.sum
 
+go-common
 go-common.*
