@@ -11,7 +11,7 @@ var (
 	StartCmd = &cobra.Command{
 		Use:     "version",
 		Short:   "Get version info",
-		Example: "couples-cli version",
+		Example: "go-common version",
 		PreRun: func(cmd *cobra.Command, args []string) {
 
 		},

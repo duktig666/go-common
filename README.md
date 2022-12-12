@@ -1,4 +1,4 @@
-# couples-subtotal
+# go-common
 
 ## 目录约束
 
@@ -30,12 +30,12 @@
 ### 运行
 ```shell
 # cli帮助
-./couples-cli help
+./go-common help
 
 # 查看版本
-./couples-cli version
+./go-common version
 
 # 运行http服务
-./couples-cli server
-./couples-cli server -c config/config-xxx.yaml
+./go-common server
+./go-common server -c config/config-xxx.yaml
 ```

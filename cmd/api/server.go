@@ -21,7 +21,7 @@ var (
 	StartCmd  = &cobra.Command{
 		Use:          "server",
 		Short:        "Start API server",
-		Example:      "couples-cli server -c config/config.yml",
+		Example:      "go-common server -c config/config.yml",
 		SilenceUsage: true,
 		PreRun: func(cmd *cobra.Command, args []string) {
 			setup()

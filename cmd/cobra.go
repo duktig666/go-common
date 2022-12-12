@@ -14,8 +14,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:          "couples-cli",
-	Short:        "couples-cli",
+	Use:          "go-common",
+	Short:        "go-common",
 	SilenceUsage: true,
 	Long:         `couples-cli:https://github.com/duktig666/go-common`,
 	Args: func(cmd *cobra.Command, args []string) error {
@@ -32,7 +32,7 @@ var rootCmd = &cobra.Command{
 }
 
 func tip() {
-	usageStr := `欢迎使用 ` + `couples-subtotal:` + ` 可以使用 ` + `-h` + ` 查看命令`
+	usageStr := `欢迎使用 ` + `go-common:` + ` 可以使用 ` + `-h` + ` 查看命令`
 	usageStr1 := `也可以参考 https://github.com/duktig666/go-common 的相关内容`
 	fmt.Printf("%s\n", usageStr)
 	fmt.Printf("%s\n", usageStr1)
