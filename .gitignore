@@ -61,4 +61,5 @@ report.*.json
 
 go.sum
 
-/couples-cli
+go-common
+go-common.*
