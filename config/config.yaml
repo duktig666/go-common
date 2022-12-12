@@ -1,12 +1,7 @@
 server:
-  name: couples-subtotal
+  name: go-common
   version: 0.0.1
-  http:
-    host: 127.0.0.1
-    port: 9992
 
 log:
   level:
     server: debug
-    # 关闭gorm日志使用 silent （silent、error、info、warn）
-    gorm: info

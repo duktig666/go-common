@@ -6,7 +6,6 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/duktig666/go-common/cmd/api"
 	"github.com/duktig666/go-common/cmd/version"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
@@ -40,7 +39,6 @@ func tip() {
 
 func init() {
 	rootCmd.AddCommand(version.StartCmd)
-	rootCmd.AddCommand(api.StartCmd)
 }
 
 //Execute : apply commands

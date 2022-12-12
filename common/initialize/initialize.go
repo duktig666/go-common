@@ -15,6 +15,5 @@ func InitServer(configDir string) {
 	once.Do(func() {
 		InitConfig(configDir)
 		logger.InitLog()
-		InitGin()
 	})
 }
