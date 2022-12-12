@@ -3,11 +3,8 @@ server:
   version: 0.0.1
   http:
     host: 127.0.0.1
-    port: 9991
-db:
-  dsn: root:20190624319xq@tcp(127.0.0.1:3306)/couples_subtotal?charset=utf8mb4&parseTime=true&loc=Local
-  maxOpenConns: 200
-  maxIdleConns: 50
+    port: 9992
+
 log:
   level:
     server: debug

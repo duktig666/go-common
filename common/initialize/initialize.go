@@ -14,7 +14,6 @@ var once sync.Once
 func InitServer(configDir string) {
 	once.Do(func() {
 		InitConfig(configDir)
-		InitGorm()
 		logger.InitLog()
 		InitGin()
 	})

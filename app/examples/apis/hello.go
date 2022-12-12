@@ -17,7 +17,7 @@ type Hello struct {
 }
 
 func (h *Hello) SayHelloHandler(c *gin.Context) {
-	name := c.Query("name")
+	name := c.DefaultQuery("name", "duktig666")
 
 	hello := service.Hello{}
 	helloRes, err := hello.SayHello(name)

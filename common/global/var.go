@@ -7,13 +7,11 @@ package global
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"gorm.io/gorm"
 )
 
 const VERSION = "v0.0.1"
 
 var (
-	Gorm   *gorm.DB
 	Viper  *viper.Viper
 	Config ConfigYaml
 	Router *gin.Engine
@@ -27,12 +25,6 @@ type ConfigYaml struct {
 			Host string
 			Port int
 		}
-	}
-
-	Db struct {
-		Dsn          string
-		MaxOpenConns int
-		MaxIdleConns int
 	}
 
 	Log struct {
