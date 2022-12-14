@@ -11,7 +11,7 @@ var (
 	StartCmd = &cobra.Command{
 		Use:     "version",
 		Short:   "Get version info",
-		Example: "go-common version",
+		Example: global.Config.Cli.Name + " version",
 		PreRun: func(cmd *cobra.Command, args []string) {
 
 		},
