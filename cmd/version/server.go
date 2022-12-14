@@ -11,7 +11,7 @@ var (
 	StartCmd = &cobra.Command{
 		Use:     "version",
 		Short:   "Get version info",
-		Example: "go-common version",
+		Example: global.Config.Cli.Name + " version",
 		PreRun: func(cmd *cobra.Command, args []string) {
 
 		},
@@ -22,6 +22,6 @@ var (
 )
 
 func run() error {
-	fmt.Printf("couples-subtotal version: %s\n", color.GreenString(global.VERSION))
+	fmt.Printf(global.Config.Cli.Name+" version: %s\n", color.GreenString(global.Config.Server.Version))
 	return nil
 }

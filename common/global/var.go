@@ -4,14 +4,9 @@
 
 package global
 
-import (
-	"github.com/spf13/viper"
-)
-
 const VERSION = "v0.0.1"
 
 var (
-	Viper  *viper.Viper
 	Config ConfigYaml
 )
 
@@ -23,6 +18,10 @@ type ConfigYaml struct {
 			Host string
 			Port int
 		}
+	}
+
+	Cli struct {
+		Name string
 	}
 
 	Log struct {
