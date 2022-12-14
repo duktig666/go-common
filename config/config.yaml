@@ -1,9 +1,14 @@
 server:
-  name: couples-subtotal
+  name: go-common
+  # 全局版本输出，eg： cli: go-common version
   version: 0.0.1
   http:
     host: 127.0.0.1
     port: 9992
+
+cli:
+  # cli 父命令
+  name: go-common
 
 log:
   level:

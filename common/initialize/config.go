@@ -13,25 +13,23 @@ import (
 )
 
 func InitConfig(configDir string) {
-	v := viper.New()
-	v.SetConfigFile(configDir)
-	v.SetConfigType("yaml")
-	err := v.ReadInConfig()
+	viper.SetConfigFile(configDir)
+	viper.SetConfigType("yaml")
+	err := viper.ReadInConfig()
 	if err != nil {
 		panic(fmt.Errorf("Fatal error config file: %s \n", err))
 	}
-	v.WatchConfig()
+	viper.WatchConfig()
 
-	if err := v.Unmarshal(&global.Config); err != nil {
-		logger.Errorf("读取配置文件失败。")
+	if err := viper.Unmarshal(&global.Config); err != nil {
+		logger.Errorf("read config file err. file: %s", configDir)
 	}
 
-	v.OnConfigChange(func(e fsnotify.Event) {
+	viper.OnConfigChange(func(e fsnotify.Event) {
 		fmt.Println("config file changed:", e.Name)
-		if err := v.Unmarshal(&global.Config); err != nil {
+		if err := viper.Unmarshal(&global.Config); err != nil {
 			fmt.Println(err)
 		}
 	})
 
-	global.Viper = v
 }

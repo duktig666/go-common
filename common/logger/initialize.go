@@ -13,7 +13,7 @@ import (
 )
 
 var zapLog zap.Logger
-var sugarLog zap.SugaredLogger
+var sugarLog *zap.SugaredLogger
 
 func InitLog() {
 	encoderConfig := zapcore.EncoderConfig{
@@ -48,10 +48,7 @@ func InitLog() {
 	if err != nil {
 		panic(fmt.Sprintf("log 初始化失败: %+v", err))
 	}
-
-	zapLog.Info("zap log 初始化成功 init success.")
-	sugarLog := zapLog.Sugar()
-	sugarLog.Infof("zap sugar log init success.")
+	sugarLog = zapLog.Sugar()
 }
 
 func switchLogLevel(level string) zapcore.Level {
