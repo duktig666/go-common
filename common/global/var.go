@@ -4,8 +4,6 @@
 
 package global
 
-const VERSION = "v0.0.1"
-
 var (
 	Config ConfigYaml
 )
