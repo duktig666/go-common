@@ -2,16 +2,18 @@ package version
 
 import (
 	"fmt"
-	"github.com/duktig666/go-common/common/global"
+	"github.com/duktig666/go-common/config"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
+
+const CLI_VERSION = "0.0.1"
 
 var (
 	StartCmd = &cobra.Command{
 		Use:     "version",
 		Short:   "Get version info",
-		Example: global.Config.Cli.Name + " version",
+		Example: config.GlobalConfig.Cli.Name + " version",
 		PreRun: func(cmd *cobra.Command, args []string) {
 
 		},
@@ -22,6 +24,6 @@ var (
 )
 
 func run() error {
-	fmt.Printf(global.Config.Cli.Name+" version: %s\n", color.GreenString(global.Config.Server.Version))
+	fmt.Printf(config.GlobalConfig.Cli.Name+" version: %s\n", color.GreenString(CLI_VERSION))
 	return nil
 }

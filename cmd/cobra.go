@@ -7,8 +7,8 @@ package cmd
 import (
 	"fmt"
 	"github.com/duktig666/go-common/cmd/version"
-	"github.com/duktig666/go-common/common/global"
-	"github.com/duktig666/go-common/common/initialize"
+	"github.com/duktig666/go-common/common/logger"
+	"github.com/duktig666/go-common/config"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 	"os"
@@ -16,7 +16,7 @@ import (
 
 var (
 	cfgFile string
-	cliName = global.Config.Cli.Name
+	cliName = config.GlobalConfig.Cli.Name
 )
 
 var rootCmd = &cobra.Command{
@@ -31,7 +31,9 @@ var rootCmd = &cobra.Command{
 		}
 		return nil
 	},
-	PersistentPreRunE: func(*cobra.Command, []string) error { return nil },
+	PersistentPreRun: func(*cobra.Command, []string) {
+		logger.InitLog(config.GlobalConfig.Log.Level, config.GlobalConfig.Log.Format)
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		tip()
 	},
@@ -39,22 +41,26 @@ var rootCmd = &cobra.Command{
 
 func tip() {
 	usageStr := `Welcome to use ` + cliName + `:` + ` use ` + `-h` + ` see cli`
-	usageStr1 := `You can also refer to the related content of https://github.com/duktig666/go-common 的相关内容`
+	usageStr1 := `You can also refer to the related content of https://github.com/duktig666/go-common`
 	fmt.Printf("%s\n", usageStr)
 	fmt.Printf("%s\n", usageStr1)
 }
 
 func init() {
+	cobra.OnInitialize(initConfig)
+
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "config/config.yaml", "config file (default is config/config.yaml)")
-	// init config file ...
-	initialize.InitServer(cfgFile)
 
 	rootCmd.AddCommand(version.StartCmd)
 }
 
-//Execute : apply commands
+// Execute : apply commands
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(-1)
 	}
+}
+
+func initConfig() {
+	config.InitConfig(cfgFile)
 }
