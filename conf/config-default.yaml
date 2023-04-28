@@ -1,0 +1,7 @@
+cli:
+  name: oracle-go
+
+log:
+  level: info
+  # console or json
+  format: console
