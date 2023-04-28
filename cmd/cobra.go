@@ -16,14 +16,15 @@ import (
 
 var (
 	cfgFile string
-	cliName = config.GlobalConfig.Cli.Name
 )
+
+const cliName = "go-common"
 
 var rootCmd = &cobra.Command{
 	Use:          cliName,
 	Short:        cliName,
 	SilenceUsage: true,
-	Long:         cliName + `:https://github.com/duktig666/go-common`,
+	Long:         cliName + ` :https://github.com/duktig666/go-common`,
 	Args: func(cmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
 			tip()
@@ -40,7 +41,7 @@ var rootCmd = &cobra.Command{
 }
 
 func tip() {
-	usageStr := `Welcome to use ` + cliName + `:` + ` use ` + `-h` + ` see cli`
+	usageStr := `Welcome to use ` + cliName + `:` + ` use ` + cliName + ` -h` + ` see cli`
 	usageStr1 := `You can also refer to the related content of https://github.com/duktig666/go-common`
 	fmt.Printf("%s\n", usageStr)
 	fmt.Printf("%s\n", usageStr1)
@@ -49,7 +50,7 @@ func tip() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "config/config.yaml", "config file (default is config/config.yaml)")
+	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "config file path")
 
 	rootCmd.AddCommand(version.StartCmd)
 }
