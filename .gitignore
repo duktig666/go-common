@@ -56,10 +56,10 @@ selenium-debug.log
 package-lock.json
 yarn.lock
 
-# project
-report.*.json
-
 go.sum
 
+# project
+report.*.json
 go-common
 go-common.*
+*.dev.yaml
