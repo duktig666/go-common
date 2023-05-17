@@ -56,7 +56,6 @@ selenium-debug.log
 package-lock.json
 yarn.lock
 
-go.sum
 
 # project
 report.*.json
