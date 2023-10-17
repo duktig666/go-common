@@ -186,3 +186,4 @@ linters:
     - nestif
     - nakedret
     - nonamedreturns
+    - depguard
